@@ -1,5 +1,16 @@
 # EVA-01 — Tema para Obsidian
 
+**EVA-01 / NERV**  
+*Dark technical workspace*
+
+## Paleta visual
+
+![Paleta de colores EVA-01: grafito oscuro, verde EVA, morado y texto claro](assets/paleta-eva-01.svg)
+
+La paleta combina el fondo grafito `#15141D`, el verde EVA `#9DFC56`, el morado `#A48BFF` y el blanco suave `#E5E4EB`.
+
+He creado EVA-01, un tema personalizado para Obsidian basado en tu entorno Ubuntu + KDE Plasma y la estética que utilizas en Kitty, Konsole y el escritorio.
+
 Tema oscuro inspirado en la estación Ubuntu + KDE Plasma EVA-01 del entorno del usuario: superficies grafito-morado, verde eléctrico para acciones y estados activos, morado para enlaces y secciones, y tipografía legible para sistemas y documentación técnica.
 
 ## Instalar
