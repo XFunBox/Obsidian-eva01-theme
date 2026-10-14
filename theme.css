@@ -1,0 +1,187 @@
+/*
+ * EVA-01 — Obsidian workspace theme
+ * Dark KDE / NERV-inspired palette; designed for technical notes.
+ * No external font or network dependency.
+ */
+body {
+  --font-interface-theme: "Inter", "Noto Sans", "DejaVu Sans", sans-serif;
+  --font-text-theme: "Inter", "Noto Sans", "DejaVu Sans", sans-serif;
+  --font-monospace-theme: "JetBrains Mono", "Fira Code", "DejaVu Sans Mono", monospace;
+  --font-interface: var(--font-interface-theme);
+  --font-text: var(--font-text-theme);
+  --font-monospace: var(--font-monospace-theme);
+  --radius-s: 5px;
+  --radius-m: 9px;
+  --radius-l: 13px;
+  --input-radius: 7px;
+  --tab-radius-active: 7px 7px 0 0;
+  --file-line-width: 850px;
+  --line-width: 850px;
+  --font-text-size: 15px;
+  --line-height-normal: 1.65;
+  --interactive-accent: #9dfc56;
+  --interactive-accent-hover: #b8ff82;
+  --text-on-accent: #10140d;
+  --caret-color: #b3ff68;
+  --checkbox-color: #9dfc56;
+  --checkbox-color-hover: #b8ff82;
+  --checkbox-border-color: #8eaf79;
+  --checkbox-border-color-hover: #b8ff82;
+  --link-color: #b4a2ff;
+  --link-color-hover: #d5caff;
+  --link-external-color: #a4e3c2;
+  --link-external-color-hover: #ceffe7;
+  --tag-color: #bcadff;
+  --tag-color-hover: #e0d7ff;
+  --tag-background: rgba(137, 102, 221, .17);
+  --tag-background-hover: rgba(137, 102, 221, .28);
+  --tag-border-color: rgba(164, 139, 255, .27);
+  --tag-border-color-hover: rgba(164, 139, 255, .5);
+}
+
+.theme-dark {
+  color-scheme: dark;
+  --background-primary: #15141d;
+  --background-primary-alt: #1b1926;
+  --background-secondary: #100f18;
+  --background-secondary-alt: #1a1725;
+  --background-modifier-border: #302b40;
+  --background-modifier-border-hover: #4d4165;
+  --background-modifier-border-focus: #9dfc56;
+  --background-modifier-form-field: #211e2d;
+  --background-modifier-form-field-highlighted: #292539;
+  --background-modifier-hover: rgba(177, 153, 246, .10);
+  --background-modifier-active-hover: rgba(157, 252, 86, .13);
+  --background-modifier-cover: rgba(9, 8, 14, .78);
+  --background-modifier-message: #252037;
+  --background-modifier-success: #25432b;
+  --background-modifier-error: #632c3b;
+  --background-modifier-error-hover: #783649;
+  --text-normal: #e5e4eb;
+  --text-muted: #a6a0b7;
+  --text-faint: #777186;
+  --text-accent: #aeff71;
+  --text-accent-hover: #d1ffa7;
+  --text-highlight-bg: rgba(157, 252, 86, .21);
+  --text-selection: rgba(151, 123, 228, .35);
+  --text-error: #ff889b;
+  --text-success: #aefc8d;
+  --interactive-normal: #272234;
+  --interactive-hover: #352d49;
+  --interactive-success: #26492b;
+  --scrollbar-bg: transparent;
+  --scrollbar-thumb-bg: #443b59;
+  --scrollbar-active-thumb-bg: #73608b;
+  --titlebar-background: #100f18;
+  --titlebar-background-focused: #14121c;
+  --tab-background-active: #201c2c;
+  --tab-text-color-active: #d9ffbd;
+  --tab-text-color-focused-active: #d9ffbd;
+  --nav-item-color-active: #d4ffa9;
+  --nav-item-background-active: rgba(157, 252, 86, .11);
+  --nav-item-color-hover: #f0eafc;
+  --nav-item-background-hover: rgba(154, 129, 232, .12);
+  --icon-color: #9992af;
+  --icon-color-hover: #bcadff;
+  --icon-color-active: #9dfc56;
+  --ribbon-background: #110f19;
+  --ribbon-background-collapsed: #110f19;
+  --divider-color: #302a40;
+  --hr-color: #494057;
+  --blockquote-border-color: #9874e0;
+  --code-normal: #d7f8b9;
+  --code-background: #10151a;
+  --indentation-guide-color: #332d42;
+  --indentation-guide-color-active: #9dfc56;
+  --table-header-background: #292239;
+  --table-header-background-hover: #342a48;
+  --table-row-alt-background: #1e1a28;
+  --table-row-background-hover: #2a2338;
+  --table-border-color: #3d344f;
+  --metadata-background: #1b1925;
+  --metadata-label-background-hover: rgba(137, 102, 221, .14);
+  --metadata-input-background-active: #292439;
+  --color-green: 157, 252, 86;
+  --color-purple: 164, 139, 255;
+}
+
+/* Force the intended dark appearance even if the light Obsidian setting is selected. */
+.theme-light {
+  --interactive-accent: #668b2e;
+  --interactive-accent-hover: #577a26;
+  --text-on-accent: #fff;
+  --link-color: #7653b3;
+  --link-color-hover: #5f389f;
+}
+
+/* Window layout, navigation, and KDE-like restrained accents */
+.workspace-ribbon, .mod-left-split, .mod-right-split { background-color: var(--background-secondary); }
+.workspace-sidedock-vault-profile, .workspace-tab-header-container { border-color: var(--background-modifier-border); }
+.workspace-tab-header-container { background: var(--background-secondary); }
+.workspace-tab-header.is-active::before, .workspace-tab-header.is-active::after { box-shadow: none; }
+.workspace-tab-header.is-active { box-shadow: inset 0 2px 0 #9dfc56; }
+.workspace-tab-header-inner-title { font-weight: 550; }
+.workspace-leaf.mod-active .view-header { border-bottom: 1px solid #413452; }
+.nav-file-title, .nav-folder-title { border-radius: 6px; margin: 1px 6px; }
+.nav-folder-title { font-weight: 600; }
+.nav-file-title.is-active, .nav-folder-title.is-active { box-shadow: inset 2px 0 0 #9dfc56; }
+.side-dock-ribbon-action:hover, .clickable-icon:hover { color: var(--text-accent); }
+.status-bar { border-top: 1px solid var(--background-modifier-border); }
+
+/* Reading + editing */
+.markdown-reading-view .markdown-preview-sizer,
+.markdown-source-view.mod-cm6 .cm-contentContainer { padding-bottom: 5rem; }
+.markdown-rendered h1, .HyperMD-header-1 { color: #beff93; }
+.markdown-rendered h2, .HyperMD-header-2 { color: #b9a0ff; }
+.markdown-rendered h3, .HyperMD-header-3 { color: #d2c3ff; }
+.markdown-rendered h4, .HyperMD-header-4 { color: #b8e1bf; }
+.markdown-rendered h1, .markdown-rendered h2, .markdown-rendered h3 { letter-spacing: -.018em; }
+.markdown-rendered h1 { border-bottom: 1px solid #3c354b; padding-bottom: .26em; }
+.markdown-rendered strong, .cm-strong { color: #f4f0fa; }
+.markdown-rendered blockquote { background: rgba(151, 119, 224, .09); border-radius: 0 8px 8px 0; padding: .35em 1em; }
+.markdown-rendered code:not(pre code), .cm-inline-code { border-radius: 5px; padding: .12em .34em; }
+.markdown-rendered pre, .markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock { background-color: var(--code-background); }
+.markdown-rendered pre { border: 1px solid #304036; border-radius: 9px; }
+.markdown-rendered pre code { color: #d7efda; }
+.markdown-rendered a.internal-link { text-decoration-color: rgba(185, 160, 255, .3); text-underline-offset: 3px; }
+.markdown-rendered a.internal-link:hover { text-decoration-color: #b9a0ff; }
+.markdown-rendered .tag { border: 1px solid var(--tag-border-color); border-radius: 5px; padding: 1px 6px; }
+.markdown-rendered .task-list-item-checkbox:checked { filter: none; }
+.markdown-rendered table { border-collapse: separate; border-spacing: 0; }
+.markdown-rendered th { color: #ceffab; }
+.markdown-rendered td, .markdown-rendered th { padding: 8px 12px; }
+.markdown-rendered mark { color: #f4ffd9; border-radius: 3px; }
+.cm-active { --indentation-guide-color-active: #8fd44d; }
+.cm-focused .cm-cursor { border-left-color: #b8ff82; }
+
+/* Obsidian callouts — bright but calm */
+.callout { border-radius: 8px; border: 1px solid rgba(var(--callout-color), .28); background-color: rgba(var(--callout-color), .075); }
+.callout-title { font-weight: 650; }
+.callout[data-callout="tip"], .callout[data-callout="success"] { --callout-color: 157, 252, 86; }
+.callout[data-callout="info"], .callout[data-callout="note"] { --callout-color: 165, 142, 255; }
+.callout[data-callout="warning"] { --callout-color: 255, 191, 110; }
+.callout[data-callout="danger"], .callout[data-callout="failure"] { --callout-color: 255, 122, 149; }
+
+/* Search, command palette and settings */
+.suggestion-container, .modal, .menu { border: 1px solid #504064; box-shadow: 0 14px 40px rgba(0, 0, 0, .3); }
+.suggestion-item.is-selected { background: rgba(157, 252, 86, .12); }
+.suggestion-highlight { color: #c0ff8a; }
+input:focus, textarea:focus { border-color: #9dfc56; }
+button.mod-cta { color: #11160f; font-weight: 650; }
+
+/* Graph view (Obsidian supports these CSS custom properties) */
+.graph-view.color-fill { color: #a48bff; }
+.graph-view.color-fill-focused { color: #9dfc56; }
+.graph-view.color-fill-tag { color: #caa4ff; }
+.graph-view.color-fill-attachment { color: #8ccaa9; }
+.graph-view.color-line { color: #554a6b; }
+.graph-view.color-text { color: #d6d0e4; }
+.graph-view.color-circle { color: #9dfc56; }
+
+/* Optional accent bar on desktop, no screen real-estate loss */
+@media (min-width: 768px) {
+  .workspace-ribbon.mod-left { border-left: 2px solid #513177; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0s !important; animation-duration: 0s !important; }
+}
