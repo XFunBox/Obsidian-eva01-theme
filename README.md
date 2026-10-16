@@ -9,28 +9,27 @@
 
 La paleta combina el fondo grafito `#15141D`, el verde EVA `#9DFC56`, el morado `#A48BFF` y el blanco suave `#E5E4EB`.
 
-He creado EVA-01, un tema personalizado para Obsidian basado en tu entorno Ubuntu + KDE Plasma y la estética que utilizas en Kitty, Konsole y el escritorio.
-
-Tema oscuro inspirado en la estación Ubuntu + KDE Plasma EVA-01 del entorno del usuario: superficies grafito-morado, verde eléctrico para acciones y estados activos, morado para enlaces y secciones, y tipografía legible para sistemas y documentación técnica.
+Tema oscuro inspirado en Ubuntu + KDE Plasma y la estética EVA-01: superficies grafito-morado, verde eléctrico para acciones y estados activos, morado para enlaces y secciones, y tipografía legible para sistemas y documentación técnica.
 
 ## Instalar
 
 1. Cierra Obsidian (o reinícialo al terminar).
-2. Copia la carpeta `Obsidian-EVA-01` completa a `<tu_boveda>/.obsidian/themes/EVA-01/` (el nombre final de la carpeta puede ser `EVA-01`).
+2. Crea `<tu_boveda>/.obsidian/themes/EVA-01/` y copia allí `manifest.json` y `theme.css`, que están en la raíz de este repositorio.
 3. Abre **Ajustes → Apariencia → Temas** y selecciona **EVA-01**. Selecciona el esquema **Oscuro** en Apariencia.
 
 Ejemplo para Linux, ejecutándolo desde el directorio en el que has descomprimido el ZIP:
 
 ```bash
 mkdir -p "/ruta/a/tu/boveda/.obsidian/themes/EVA-01"
-cp Obsidian-EVA-01/{manifest.json,theme.css} "/ruta/a/tu/boveda/.obsidian/themes/EVA-01/"
+cp manifest.json theme.css "/ruta/a/tu/boveda/.obsidian/themes/EVA-01/"
 ```
 
 > No modifica otros temas, plugins ni la barra flotante de KDE. No necesita fuentes de pago ni conexiones externas. Si ya tienes instalado **JetBrains Mono** e **Inter**, los usará; si no, emplea alternativas del sistema.
 
 ## Personalización rápida
 
-Edita `theme.css` para ajustar estos valores:
+Edita la copia instalada de `theme.css` para ajustar estos valores:
+
 - `--interactive-accent`: verde principal `#9dfc56`.
 - `--link-color`: morado de enlaces `#b4a2ff`.
 - `--background-primary`: fondo central `#15141d`.
@@ -38,4 +37,4 @@ Edita `theme.css` para ajustar estos valores:
 
 ## Compatibilidad
 
-Pensado para Obsidian de escritorio (Linux/KDE) y también usable en móvil. El estilo es propio de Obsidian; no modifica temas de KDE, Konsole, Kitty ni aplicaciones ajenas. Algunos plugins con estilos personalizados pueden requerir ajustes adicionales.
+Versión del tema **1.0.0**; requiere Obsidian **1.5.0 o posterior**, según `manifest.json`. El manifiesto permite su uso en escritorio y móvil; la apariencia móvil no se ha verificado en esta revisión. Pensado principalmente para escritorio Linux/KDE. El estilo es propio de Obsidian; no modifica temas de KDE, Konsole, Kitty ni aplicaciones ajenas. Algunos plugins con estilos personalizados pueden requerir ajustes adicionales.
